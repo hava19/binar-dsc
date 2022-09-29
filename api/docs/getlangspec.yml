@@ -1,0 +1,30 @@
+tags : 
+- name : "Lang"
+description: "This is from Method GET with route /lang and param "
+produces:
+- "application/json"
+
+get:
+  summary: Gets a Language BY name .
+  parameters:
+    - in: path
+      name: name
+      type: string
+      required: true
+      description: name of the language to get.
+
+
+responses:
+  200:
+    description: "Success"
+    schema:
+      type: "object"
+      properties:
+        data:
+          type: "object"
+        status:
+          type: "String"
+        message:
+          type: "object"
+  400:
+    description: "Server Error with status 400 !"

@@ -1,0 +1,42 @@
+tags : 
+  - name : "Lang"
+
+paths:
+  /lang/{name}:
+put:
+  description: PUT method
+  parameters:
+    - in: path
+      name: name
+      required : true
+      type: string
+      required: true
+      description: select item value to update
+      schema:
+        type: "string"
+    - in: body
+      name: update name
+      description: input request body with json format ya , ex = {"name":"JAVA"}
+      schema:
+        type: object
+      required:
+        - name
+      properties:
+        name :
+          type: object
+
+responses:
+  200:
+    description: "Success"
+    schema:
+      type: "object"
+      properties:
+        data:
+          type: "object"
+        status:
+          type: "String"
+        message:
+          type: "object"
+ 
+  400:
+    description: "Same response is for 202, 400"

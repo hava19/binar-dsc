@@ -1,0 +1,35 @@
+tags : 
+- name : "Lang"
+
+description: "This is from Method POST with route /lang."
+
+produces:
+- "application/json"
+
+parameters:
+    - in: body
+      name: name
+      description: input request body with json format ya , ex = {"name":"PHP"}.
+      schema:
+        type: object
+      required:
+        - name
+      properties:
+        name :
+          type: string
+       
+responses:
+  200:
+    description: "Success"
+    schema:
+      type: "object"
+      properties:
+        data:
+          type: "object"
+        status:
+          type: "string"
+        message:
+          type: "object"
+ 
+  400:
+    description: "Server Error with status 400 !"

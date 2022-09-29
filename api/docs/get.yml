@@ -1,0 +1,21 @@
+tags : 
+- name : "Index"
+
+description: "This is from method GET ."
+produces:
+- "application/json"
+responses:
+  200:
+    description: "Success"
+    schema:
+      type: "object"
+      properties:
+        data:
+          type: "object"
+        status:
+          type: "string"
+        message:
+          type: "string"
+ 
+  400:
+    description: "Server Error with status 400 !"

@@ -1,0 +1,23 @@
+tags:
+  - name : "Lang"
+delete:
+  parameters:
+    - name: name
+      in: path
+      description: Must provide Value of name 
+      required: true
+      type: string
+responses:
+  200:
+    description: "Success Delete !"
+    schema:
+      type: "object"
+      properties:
+        data:
+          type: "object"
+        status:
+          type: "String"
+        message:
+          type: "object"
+  400:
+    description: "Server Error with status 400 !"
